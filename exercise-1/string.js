@@ -25,6 +25,10 @@ function capitalize(input){
 
 function camelCase(input){
     if(typeof(input) == "string"){
+        var regex = /[^a-zA-Z0-9]/g;
+        
+        input = input.replace(regex," ");
+        console.log(input);
         input = input.split(" ");
         var tmp = "";
         for (let element of input) {
@@ -124,5 +128,5 @@ function leet(input){
     }
 }
 
-var test = "ToggleCase is the 3oolest";
+var test = "ToggleCase is_the coolest";
 camelCase(test);
