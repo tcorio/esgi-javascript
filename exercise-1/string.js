@@ -27,6 +27,7 @@ function camelCase(input){
     input = input.split(" ");
     var tmp = "";
     for (let element of input) {
+        element = element.toLocaleLowerCase();
         tmp += element[0].toUpperCase() + element.substring(1);
     }
     return tmp;
