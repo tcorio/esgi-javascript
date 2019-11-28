@@ -117,7 +117,7 @@ function leet(input){
             tmp += " ";
             
         }
-        tmp = tmtp.trim();
+        tmp = tmp.trim();
         return tmp;
     } else {
         return "";
