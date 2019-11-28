@@ -13,7 +13,8 @@ function capitalize(input){
     var temp = "";
     //Boucler sur le input 
     for (const element of input) {
-        temp += element[0].toUpperCase() + element.substring(1).trim();
+        temp += element[0].toUpperCase() + element.substring(1)
+        temp = temp.trim();
     }
     
     return temp;   
