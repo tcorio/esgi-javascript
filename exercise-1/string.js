@@ -90,8 +90,3 @@ function leet(input){
     }
     console.log(tmp);
 }
-
-
-
-var test = "baba au rome";
-leet(test);
