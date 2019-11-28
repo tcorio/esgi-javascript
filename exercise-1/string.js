@@ -10,18 +10,17 @@ function ucfirst(input){
 
 function capitalize(input){
     if(typeof(input) == "string"){
-        input.trim();
+        input = input.trim().toLocaleLowerCase();
         input = input.split(" ");
         var temp = "";
         //Boucler sur le input 
         for (const element of input) {
-            temp += element[0].toUpperCase() + element.substring(1)
-            temp = temp.trim();
+            temp += element[0].toUpperCase() + element.substring(1) + " "; 
         }
     } else {
         return "";
     }
-    
+    temp = temp.trim();
     return temp;   
 }
 
@@ -100,3 +99,6 @@ function leet(input){
     }
     return tmp;
 }
+
+var test = "tESTd";
+capitalize(test);
