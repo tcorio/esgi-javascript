@@ -10,8 +10,7 @@ function ucfirst(input){
 
 function capitalize(input){
     if(typeof(input) == "string"){
-        input = input.trim().toLocaleLowerCase();
-        input = input.split(" ");
+        input = input.trim().toLocaleLowerCase().split(" ");
         var temp = "";
         //Boucler sur le input 
         for (const element of input) {
@@ -100,5 +99,5 @@ function leet(input){
     return tmp;
 }
 
-var test = "tESTd";
+var test = " tESTd";
 capitalize(test);
