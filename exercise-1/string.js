@@ -1,6 +1,6 @@
 function ucfirst(input){
     input = input[0].toUpperCase() + input.substring(1);
-    return console.log(input); 
+    return input; 
 }
 
 function capitalize(input){
@@ -10,7 +10,7 @@ function capitalize(input){
     for (const element of input) {
         temp += element[0].toUpperCase() + element.substring(1) + " ";
     }
-    console.log(temp);   
+    return temp;   
 }
 
 function camelCase(input){
@@ -20,7 +20,7 @@ function camelCase(input){
     for (let element of input) {
         tmp += element[0].toUpperCase() + element.substring(1);
     }
-    console.log(tmp);
+    return tmp;
 }
 
 function snakeCase(input){
@@ -29,7 +29,7 @@ function snakeCase(input){
     for (let element of input) {
         tmp += element.replace(" ","_");
     }
-    console.log(tmp);
+    return tmp;
 }
 
 function verlan(input){
@@ -42,8 +42,7 @@ function verlan(input){
         var joinArray = reverseArray.join("");
         tmp += joinArray+" ";
     }
-    console.log(tmp);
-     return ""; 
+     return tmp; 
 }
 
 function yoda(input){
@@ -53,7 +52,7 @@ function yoda(input){
     for (const element of reverseArray) {
         tmp += element + " ";  
     }
-    console.log(tmp);  
+    return tmp;  
 }
 
 function leet(input){
@@ -88,5 +87,5 @@ function leet(input){
         tmp += " ";
          
     }
-    console.log(tmp);
+    return tmp;
 }
