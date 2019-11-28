@@ -24,11 +24,15 @@ function capitalize(input){
 }
 
 function camelCase(input){
-    input = input.split(" ");
-    var tmp = "";
-    for (let element of input) {
-        element = element.toLocaleLowerCase();
-        tmp += element[0].toUpperCase() + element.substring(1);
+    if(typeof(input) == "string"){
+        input = input.split(" ");
+        var tmp = "";
+        for (let element of input) {
+            element = element.toLocaleLowerCase();
+            tmp += element[0].toUpperCase() + element.substring(1);
+        }
+    } else {
+        return "";
     }
     return tmp;
 }
