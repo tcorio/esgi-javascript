@@ -100,5 +100,5 @@ function leet(input){
     return tmp;
 }
 
-var test = " tESTd";
-capitalize(test);
+var test = "ToggleCase is the 3oolest";
+camelCase(test);
