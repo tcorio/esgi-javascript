@@ -37,7 +37,7 @@ function camelCase(input){
     return tmp;
 }
 
-function snakeCase(input){
+function snake_case(input){
     var tmp = "";
     //Boucler sur le input 
     for (let element of input) {
