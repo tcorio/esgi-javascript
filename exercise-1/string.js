@@ -8,7 +8,7 @@ function capitalize(input){
     var temp = "";
     //Boucler sur le input 
     for (const element of input) {
-        temp += element[0].toUpperCase() + element.substring(1) + " ";
+        temp += trim(element[0].toUpperCase() + element.substring(1));
     }
     return temp;   
 }
@@ -16,7 +16,6 @@ function capitalize(input){
 function camelCase(input){
     input = input.split(" ");
     var tmp = "";
-    //Boucler sur le input 
     for (let element of input) {
         tmp += element[0].toUpperCase() + element.substring(1);
     }
