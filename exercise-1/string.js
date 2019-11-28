@@ -39,6 +39,7 @@ function camelCase(input){
 
 function snake_case(input){
     if(typeof(input) == "string"){
+        input = input.toLocaleLowerCase();
         var tmp = "";
         //Boucler sur le input 
         for (let element of input) {
