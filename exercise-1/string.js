@@ -9,12 +9,17 @@ function ucfirst(input){
 }
 
 function capitalize(input){
-    input = input.split(" ");
-    var temp = "";
-    //Boucler sur le input 
-    for (const element of input) {
-        temp += element[0].toUpperCase() + element.substring(1)
-        temp = temp.trim();
+    if(typeof(input) == "string"){
+        input.trim();
+        input = input.split(" ");
+        var temp = "";
+        //Boucler sur le input 
+        for (const element of input) {
+            temp += element[0].toUpperCase() + element.substring(1)
+            temp = temp.trim();
+        }
+    } else {
+        return "";
     }
     
     return temp;   
