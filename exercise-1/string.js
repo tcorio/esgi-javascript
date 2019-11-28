@@ -62,6 +62,7 @@ function verlan(input){
             var joinArray = reverseArray.join("");
             tmp += joinArray+" ";
         }
+        tmp = tmp.trim();
         return tmp; 
     } else {
         return "";
@@ -76,6 +77,7 @@ function yoda(input){
         for (const element of reverseArray) {
             tmp += element + " ";  
         }
+        tmp = tmp.trim();
         return tmp;  
     } else {
         return "";
@@ -115,6 +117,7 @@ function leet(input){
             tmp += " ";
             
         }
+        tmp = tmtp.trim();
         return tmp;
     } else {
         return "";
