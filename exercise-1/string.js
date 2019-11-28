@@ -105,7 +105,7 @@ function leet(input){
                     tmp += 0;
                 }
                 else if(iterator == "U" || iterator == "u"){
-                    tmp += "_";
+                    tmp += "(_)";
                 }
                 else if(iterator == "Y" || iterator == "y"){
                     tmp += 7;
