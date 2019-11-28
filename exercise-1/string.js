@@ -31,77 +31,93 @@ function camelCase(input){
             element = element.toLocaleLowerCase();
             tmp += element[0].toUpperCase() + element.substring(1);
         }
+        return tmp;
     } else {
         return "";
     }
-    return tmp;
 }
 
 function snake_case(input){
-    var tmp = "";
-    //Boucler sur le input 
-    for (let element of input) {
-        tmp += element.replace(" ","_");
+    if(typeof(input) == "string"){
+        var tmp = "";
+        //Boucler sur le input 
+        for (let element of input) {
+            tmp += element.replace(" ","_");
+        }
+        return tmp;
+    } else {
+        return "";
     }
-    return tmp;
 }
 
 function verlan(input){
-    input = input.split(" ");
-    var tmp = "";
-    //Boucler sur le input 
-    for (let element of input) {
-        var splitString = element.split("");
-        var reverseArray = splitString.reverse();
-        var joinArray = reverseArray.join("");
-        tmp += joinArray+" ";
+    if(typeof(input) == "string"){
+        input = input.split(" ");
+        var tmp = "";
+        //Boucler sur le input 
+        for (let element of input) {
+            var splitString = element.split("");
+            var reverseArray = splitString.reverse();
+            var joinArray = reverseArray.join("");
+            tmp += joinArray+" ";
+        }
+        return tmp; 
+    } else {
+        return "";
     }
-     return tmp; 
 }
 
 function yoda(input){
-    var tmp = "";
-    input = input.split(" ");
-    var reverseArray = input.reverse();
-    for (const element of reverseArray) {
-        tmp += element + " ";  
+    if(typeof(input) == "string"){
+        var tmp = "";
+        input = input.split(" ");
+        var reverseArray = input.reverse();
+        for (const element of reverseArray) {
+            tmp += element + " ";  
+        }
+        return tmp;  
+    } else {
+        return "";
     }
-    return tmp;  
 }
 
 function leet(input){
-    input = input.split(" ");
-    var tmp = "";
+    if(typeof(input) == "string"){
+        input = input.split(" ");
+        var tmp = "";
 
-    for (const element of input) {
-        for (const iterator of element) {
+        for (const element of input) {
+            for (const iterator of element) {
+                
+                if(iterator == "A" || iterator == "a"){
+                    tmp += 4;
+                }
+                else if(iterator == "E" || iterator == "e"){
+                    tmp += 3;
+                }
+                else if(iterator == "I" || iterator == "i"){
+                    tmp += 1;
+                }
+                else if(iterator == "O" || iterator == "o"){
+                    tmp += 0;
+                }
+                else if(iterator == "U" || iterator == "u"){
+                    tmp += "_";
+                }
+                else if(iterator == "Y" || iterator == "y"){
+                    tmp += 7;
+                }
+                else {
+                    tmp += iterator;
+                } 
+            }
+            tmp += " ";
             
-            if(iterator == "A" || iterator == "a"){
-                tmp += 4;
-            }
-            else if(iterator == "E" || iterator == "e"){
-                tmp += 3;
-            }
-            else if(iterator == "I" || iterator == "i"){
-                tmp += 1;
-            }
-            else if(iterator == "O" || iterator == "o"){
-                tmp += 0;
-            }
-            else if(iterator == "U" || iterator == "u"){
-                tmp += "_";
-            }
-            else if(iterator == "Y" || iterator == "y"){
-                tmp += 7;
-            }
-            else {
-                tmp += iterator;
-            } 
         }
-        tmp += " ";
-         
+        return tmp;
+    } else {
+        return "";
     }
-    return tmp;
 }
 
 var test = "ToggleCase is the 3oolest";
