@@ -1,6 +1,11 @@
 function ucfirst(input){
-    input = input[0].toUpperCase() + input.substring(1);
-    return input; 
+    if(typeof(input) == "string"){
+        input = input[0].toUpperCase() + input.substring(1);
+        return input; 
+    } else {
+        return "";
+    }
+   
 }
 
 function capitalize(input){
@@ -8,8 +13,9 @@ function capitalize(input){
     var temp = "";
     //Boucler sur le input 
     for (const element of input) {
-        temp += trim(element[0].toUpperCase() + element.substring(1));
+        temp += element[0].toUpperCase() + element.substring(1).trim();
     }
+    
     return temp;   
 }
 
