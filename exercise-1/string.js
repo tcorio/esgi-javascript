@@ -119,7 +119,6 @@ function leet(input){
                 } 
             }
             tmp += " ";
-            
         }
         tmp = tmp.trim();
         return tmp;
